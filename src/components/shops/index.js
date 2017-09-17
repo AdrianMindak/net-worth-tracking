@@ -14,7 +14,7 @@ const shopsData = [
     phone: '+49 30 80403812',
     email: 'info@von-luck.de',
     adress: 'Von-Luck-Straße 27, 14129 Berlin Nikolasee',
-    googleLink: `https://www.google.com/maps/dir/Current+Location/Café+von+Luck/@52.4307833,13.2044113`,
+    googleLink: `https://www.google.de/maps/dir/current+location/cafe+von+luck+berlin/@52.4307748,13.1715807,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x47a8590b4320b0f5:0xd5b35bdf7aa528b6!2m2!1d13.2066!2d52.43078`,
     image: {
       image: nikolassee,
       alt: 'Schlachtensee in Berlin Nikolassee'
@@ -34,7 +34,7 @@ const shopsData = [
     phone: '+49 30 60946790',
     email: 'info@von-luck.de',
     adress: 'Auerbach Straße 10, 14193 Berlin Grunewald',
-    googleLink: `https://www.google.com/maps/dir/52.6778291,13.26659/Caf%C3%A9+VonLuck,+Auerbachstra%C3%9Fe,+Berlin,+Germany/@52.5816575,13.1793634,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47a8574c44670e57:0x18cf837468a54854!2m2!1d13.2620688!2d52.4875438`,
+    googleLink: `https://www.google.com/maps/dir/current+location/Caf%C3%A9+VonLuck,+Auerbachstra%C3%9Fe,+Berlin,+Germany/@52.5816575,13.1793634,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47a8574c44670e57:0x18cf837468a54854!2m2!1d13.2620688!2d52.4875438`,
     image: {
       image: grunewald,
       alt: 'Grunewald in Berlin'
