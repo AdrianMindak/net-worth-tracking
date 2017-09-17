@@ -1,0 +1,54 @@
+.home {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#pagetitle {
+  margin: 50px auto;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--dark-red);
+  background-color: var(--red);
+}
+
+#pagetitle-cafe {
+  position: absolute;
+  top: 33%;
+  left: 26%;
+  color: var(--dark-grey);
+}
+
+#pagetitle-vonluck {
+  position: absolute;
+  top: 42%;
+  left: 15%;
+  font-weight: 600;
+  font-size: 35px;
+  color: white;
+}
+
+.home-wellcome {
+  text-align: center;
+}
+
+.home-wellcome p {
+  margin: 30px auto;
+  line-height: 2;
+}
+
+a.home-customer-feedback {
+  margin: 20px;
+  padding: 10px;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+}
+
+a.home-customer-feedback:active {
+  color: white;
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}

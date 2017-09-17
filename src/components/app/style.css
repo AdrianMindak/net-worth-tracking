@@ -1,7 +1,3 @@
-* {
-  --red: red;
-}
-
 .app {
   width: 100%;
   height: 100%;
@@ -14,16 +10,66 @@
   height: 10px;
   width: 100%;
   background-color: var(--red);
+  border-bottom: 5px solid var(--dark-red);
+  z-index: 100;
+  box-shadow: 0px -5px 20px 0px black;
+}
+
+.app-gallerie {
+  height: 400px;
+  overflow: hidden;
+  background-color: var(--red);
+}
+
+.app-gallerie img {
+  width: auto;
+  height: 100%;
 }
 
 .app-content {
+  width: 90%;
+  padding: 5% 5% 10% 5%;
+  height: 85%;
+  overflow: scroll;
 }
 
 .app-menue {
+  z-index: 99;
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 10px;
+  height: auto;
   width: 100%;
   background-color: var(--red);
+  border-top: 5px solid var(--dark-red);
+  box-shadow: 0px 5px 20px 0px black;
+
+  color: white;
+}
+
+.app-menue-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app-menue a {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
+
+.app-menue-links a:active {
+  background-color: white;
+  color: var(--red);
 }

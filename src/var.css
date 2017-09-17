@@ -1,0 +1,15 @@
+* {
+  --red: #E25252;
+  --dark-red: #A23B3B;
+  --light-red: #FF5D5D;
+
+  --grey: rgb(150, 150, 150);
+  --dark-grey: rgb(50, 50, 50);
+  --light-grey: rgb(230, 230, 230);
+
+  --dark-white: rgb(248, 248, 250);
+
+  --blue: #3293E2;
+  --blue-rgba: rgb(50, 147, 226);
+  --light-blue: rgb(77,177,226);
+}
