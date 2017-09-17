@@ -10,7 +10,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
+
         <div className='app-header'></div>
+
         <div className='app-content'>
           <Switch>
             <Route exact path='/' component={ Home }/>
@@ -18,14 +20,15 @@ export default class App extends Component {
             <Route exact path='/about' component={ About }/>
           </Switch>
         </div>
+
         <div className='app-menue'>
-          <div className='app-menue-border'></div>
           <div className='app-menue-links'>
             <Link to="/">Home</Link>
             <Link to="/shops">Shops</Link>
             <Link to="/about">About</Link>
           </div>
         </div>
+
       </div>
     );
   }

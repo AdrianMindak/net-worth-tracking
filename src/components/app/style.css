@@ -15,23 +15,13 @@
   box-shadow: 0px -5px 20px 0px black;
 }
 
-.app-gallerie {
-  height: 400px;
-  overflow: hidden;
-  background-color: var(--red);
-}
-
-.app-gallerie img {
-  width: auto;
-  height: 100%;
-}
-
 .app-content {
   width: 90%;
   max-width: 1000px;
-  padding: 5% 5% 10% 5%;
-  height: 85%;
-  overflow: scroll;
+  padding: 5%;
+  height: auto;
+  margin-bottom: 70px;
+  overflow: auto;
 }
 
 .app-menue {

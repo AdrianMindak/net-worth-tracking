@@ -34,28 +34,12 @@ export default class Home extends Component {
             To be a good place for work for our employees
             and with good food for our beloved customers.
           </p>
-          <a href='mailto:info@von-luck.de?Subject=Customer%20Feedback' className='home-customer-feedback' target='_top'>Give us your feedback per email.</a>
-        </div>
-
-        {
-          /*
-          <div className='home-news-feed'>
-            <h2>What do our costumers love the most?</h2>
-            <div className="home-news-feed-product-list">
-              {
-                foodData.map( (product,index) => {
-                  return(
-                    <div className='home-news-feed-product-list-product'>
-                      <h3>{ product.title }</h3>
-                      <p>{ product.description }</p>
-                    </div>
-                  )
-                })
-              }
+          <a href='mailto:info@von-luck.de?Subject=Customer%20Feedback' target='_top'>
+            <div className='home-customer-feedback'>
+              Give us your feedback per email.
             </div>
-          </div>
-          */
-        }
+          </a>
+        </div>
       </div>
     );
   }

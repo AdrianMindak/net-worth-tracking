@@ -14,7 +14,7 @@ const shopsData = [
     phone: '+49 30 80403812',
     email: 'info@von-luck.de',
     adress: 'Von-Luck-Straße 27, 14129 Berlin Nikolasee',
-    googleLink: `https://www.google.de/maps/dir/current+location/cafe+von+luck+berlin/@52.4307748,13.1715807,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x47a8590b4320b0f5:0xd5b35bdf7aa528b6!2m2!1d13.2066!2d52.43078`,
+    googleLink: `https://www.google.de/maps/dir/current+location/cafe+von+luck+berlin/@52.4307593,13.1365605,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x47a8590b4320b0f5:0xd5b35bdf7aa528b6!2m2!1d13.2066!2d52.43078`,
     image: {
       image: nikolassee,
       alt: 'Schlachtensee in Berlin Nikolassee'
