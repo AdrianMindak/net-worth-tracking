@@ -16,6 +16,7 @@
 }
 
 .app-content {
+  min-width: 300px;
   width: 90%;
   max-width: 1000px;
   padding: 5%;
