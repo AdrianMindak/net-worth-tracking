@@ -29,14 +29,14 @@ export default class Home extends Component {
           </h1>
           <p>
             Welcome to Café VonLuck. <br/>
-            We do your best to be a mentionable part
-            of the Nikolassee and Grunewald community.
-            To be a good place for work for our employees
-            and with good food for our beloved customers.
+            We do our best to be a mentionable part
+            of the Nikolassee and Grunewald community,
+            to be a good place for work for our employees
+            and offer great food to our beloved customers.
           </p>
           <a href='mailto:info@von-luck.de?Subject=Customer%20Feedback' target='_top'>
             <div className='home-customer-feedback'>
-              Give us your feedback per email.
+              Give us your feedback via e-mail.
             </div>
           </a>
         </div>

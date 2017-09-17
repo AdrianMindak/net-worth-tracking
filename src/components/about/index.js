@@ -19,12 +19,9 @@ export default class About extends Component {
           <p>
             Welcome to Café VonLuck.
             A family company since 2002.
-            Our first Store was established and named after the Von-Luck-Straße 
-            in Berlin Nikolassee in 2002. Since then we do our best to be a fair
-            working place and a quit place for good Food. <br/>
-
-             We don't bake by ourselves, all products are being
-             delivered to us. <br/>
+            Our first Store was established and named after the Von-Luck-Straße
+            in Berlin Nikolassee in 2002. Since then we did our best to be a fair
+            working place and a quiet place for good Food. <br/>
 
              Café VonLuck is a sole proprietorship
              owned by Michael & Claudia Mindak.
