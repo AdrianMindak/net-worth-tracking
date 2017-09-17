@@ -3,10 +3,11 @@ import '../../var.css'
 import './style.css'
 import nikolassee from '../../images/schlachtensee.jpg'
 import grunewald from '../../images/grunewald.jpg'
-import { Phone, Mail, Map, SocialMedia, CroissantAndCoffee } from '../icons'
+import { Phone, Mail, Map, SocialMedia, CroissantAndCoffee, Emoji } from '../icons'
 
 const shopsData = [
   {
+    established: '2002',
     title: 'Café VonLuck Nikolassee',
     district: 'Nikolassee',
     description: '',
@@ -26,6 +27,7 @@ const shopsData = [
     }
   },
   {
+    established: '2010',
     title: 'Café VonLuck Grunewald',
     district: 'Grunewald',
     description: '',
@@ -59,6 +61,15 @@ export default class Shops extends Component {
                     <Map width='50px' color='var(--red)'/>
                   </a>
                   <img src={ shop.image.image } alt={ shop.image.alt}/>
+                </div>
+                <div className='shops-shop-image-established'>
+                  <Emoji emoji="star" width="10px" color="white"/>
+                  <Emoji emoji="star" width="10px" color="white"/>
+                  <Emoji emoji="star" width="10px" color="white"/>
+                  <h4>{ `since ${shop.established}` }</h4>
+                  <Emoji emoji="star" width="10px" color="white"/>
+                  <Emoji emoji="star" width="10px" color="white"/>
+                  <Emoji emoji="star" width="10px" color="white"/>
                 </div>
                 <div className='shops-shop-info'>
 

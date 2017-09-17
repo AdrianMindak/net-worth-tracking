@@ -429,7 +429,14 @@ class Emoji extends Component {
             </g>
           </svg>
         )
-        break;
+      case 'star':
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" width={ this.props.width || "100%" } fill={ this.props.color || 'black' } x="0px" y="0px" viewBox="0 0 100 100">
+          <g>
+            <polygon points="50,77.4 23.7,91.2 28.8,62 7.5,41.3 36.9,37 50,10.4 63.1,37 92.5,41.3 71.2,62 76.3,91.2  "/>
+          </g>
+        </svg>
+        )
     }
   }
 };

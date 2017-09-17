@@ -12,4 +12,7 @@
   --blue: #3293E2;
   --blue-rgba: rgb(50, 147, 226);
   --light-blue: rgb(77,177,226);
+
+  --font-standard: 'Open Sans', sans-serif;
+  --font-oldfassion: 'IM Fell Great Primer SC', 'Open Sans', serif;
 }
