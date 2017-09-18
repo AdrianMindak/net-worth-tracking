@@ -21,9 +21,10 @@
 /* font-size */
   --fz-h1: 8vw;
   --fz-h2: 6vw;
-  --fz-h3: 4vw;
+  --fz-h3: 6vw;
+  --fz-h4: 4vw;
   --fz-p: 4vw;
-  --fz-p-small: .75vw;
+  --fz-p-small: 3vw;
   --fz-caption: .5vw;
 
   /* icon-size */
@@ -48,21 +49,58 @@
     --logo-vonluck: 8vw;
     --l-vl-top: 22vw;
     --l-vl-left: 8vw;
+
+  /* menue top or bottom */
+    --menue-top: none;
+    --menue-bottom: grid;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 401px) {
   * {
     /* font-size */
-      --fz-h1: 6vw;
-      --fz-h2: 5vw;
-      --fz-h3: 2vw;
-      --fz-p: 2vw;
-      --fz-p-small: .75vw;
-      --fz-caption: .5vw;
+      --fz-h1: 48px;
+      --fz-h2: 40px;
+      --fz-h3: 30px;
+      --fz-h4: 16px;
+      --fz-p: 16px;
+      --fz-p-small: 12px;
+
 
     /* logo home */
-      --logo: 30vw;
-      --logo-margin: 10vw;
+      --logo: 200px;
+      --logo-margin: 40px;
+      --logo-cafe: 36px;
+      --l-c-top: 65px;
+      --l-c-left: 40px;
+      --logo-vonluck: 36px;
+      --l-vl-top: 90px;
+      --l-vl-left: 23px;
+  }
+}
+
+@media (min-width: 500px) {
+  * {
+    --menue-top: grid;
+    --menue-bottom: none;
+  }
+}
+/*
+@media (min-width: 401px) and (orientation: landscape) {
+  * {
+    /* font-size */ /*
+      --fz-h1: 3vw;
+      --fz-h2: 3vw;
+      --fz-h3: 2vw;
+      --fz-p: 1.8vw;
+
+    /* app-content */ /*
+      --a-c-width: 92vw;
+      --a-c-padding: 4vw;
+      --a-c-padding-bottom: 10vw;
+
+    /* logo home */ /*
+      --logo-margin: 5vw;
+      --logo: 230px;
       --logo-cafe: 4.5vw;
       --l-c-top: 10vw;
       --l-c-left: 8vw;
@@ -71,23 +109,4 @@
       --l-vl-left: 5vw;
   }
 }
-
-@media (min-width: 501px) and (orientation: landscape) {
-  * {
-    /* font-size */
-      --fz-h1: 3vw;
-      --fz-h2: 3vw;
-      --fz-h3: 2vw;
-      --fz-p: 1.8vw;
-      --fz-p-small: .75vw;
-      --fz-caption: .5vw;
-
-    /* app-content */
-      --a-c-width: 92vw;
-      --a-c-padding: 4vw;
-      --a-c-padding-bottom: 10vw;
-
-    /* logo home */
-      --logo-margin: 5vw;
-  }
-}
+*/

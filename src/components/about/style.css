@@ -9,8 +9,13 @@
   margin: 20px auto;
 }
 
+.about h1 {
+  font-size: var(--fz-h3)
+}
+
 .about-story p {
   line-height: 2em;
+  font-size: var(--fz-p-small)
 }
 
 .about-jobs {

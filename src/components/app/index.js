@@ -11,7 +11,13 @@ export default class App extends Component {
     return (
       <div className="app">
 
-        <div className='app-header'></div>
+        <div className='app-header'>
+          <div className='app-header-links'>
+            <Link to="/">Home</Link>
+            <Link to="/shops">Shops</Link>
+            <Link to="/about">About</Link>
+          </div>
+        </div>
 
         <div className='app-content'>
           <Switch>
