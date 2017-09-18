@@ -22,9 +22,14 @@
 
 .shops-shop-image {
   width: 100%;
-  height: auto;
+  height: 20vw;
 
   position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shops-shop-image a {
@@ -36,8 +41,10 @@
   border-radius: 50%;
   background-color: white;
 }
+.shops-shop-image-nikolassee {}
+.shops-shop-image-grunewald {}
 
-.shops-shop-image-established {
+.shops-shop-established {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,19 +53,12 @@
   background-color: var(--dark-grey);
 }
 
-.shops-shop-image-established h4 {
+.shops-shop-established h4 {
   margin: 0;
   color: white;
   font-family: var(--font-oldfassion);
   text-align: center;
   letter-spacing: 5px;
-}
-
-
-.shops-shop img {
-  max-width: 100%;
-  max-height: auto;
-  overflow: hidden;
 }
 
 .shops-shop-info {
@@ -72,12 +72,11 @@
 .shops-shop-title {
   width: 80%;
   margin: 20px auto;
-  font-size: 25px;
+  font-size: var(--fz-h2);
   font-weight: 300;
 }
 
 .shops-shop-title-big {
-  font-size: 30px;
   font-weight: 600;
   margin-bottom: 30px;
 }

@@ -5,10 +5,12 @@
 }
 
 #pagetitle {
-  margin: 50px auto;
+  margin: var(--logo-margin) auto;
   position: relative;
-  width: 200px;
-  height: 200px;
+  min-width: 100px;
+  min-height: 100px;
+  width: var(--logo);
+  height: var(--logo);
   border-radius: 50%;
   border: 5px solid var(--dark-red);
   background-color: var(--red);
@@ -16,18 +18,26 @@
 
 #pagetitle-cafe {
   position: absolute;
-  top: 33%;
-  left: 26%;
+  top: var(--l-c-top);
+  left: var(--l-c-left);
+
+  font-weight: 700;
+  font-size: var(--logo-cafe);
   color: var(--dark-grey);
 }
 
 #pagetitle-vonluck {
   position: absolute;
-  top: 42%;
-  left: 15%;
-  font-weight: 600;
-  font-size: 35px;
+  top: var(--l-vl-top);
+  left: var(--l-vl-left);
+
+  font-weight: 700;
+  font-size: var(--logo-vonluck);
   color: white;
+}
+
+h1.pagetitle-invisible {
+  display: none;
 }
 
 .home-wellcome {

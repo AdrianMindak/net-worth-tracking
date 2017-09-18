@@ -349,6 +349,7 @@ class SocialMedia extends Component {
           </g>
         </svg>
       )
+      default: return new Error("Error no social media icon could be created. Make sure you used the right properties.")
 
     }
   }
@@ -401,6 +402,7 @@ class EspressoMaschine extends Component {
           <path d="M56.2,92.7c0.4,0,0.7-0.3,0.7-0.7v0c0-0.4-0.3-0.6-0.7-0.6s-0.7,0.3-0.7,0.7S55.9,92.7,56.2,92.7z"/>
         </svg>
       )
+    default: return new Error("Error no espresso maschine could be created. Make sure you used the right properties.")
     }
   }
 };
@@ -437,6 +439,7 @@ class Emoji extends Component {
           </g>
         </svg>
         )
+      default: return new Error("Error no emojicon could be created. Make sure you used the right properties.")
     }
   }
 };
@@ -452,8 +455,6 @@ class Job extends Component {
     )
   }
 };
-
-
 
 export {
   TrashCan,

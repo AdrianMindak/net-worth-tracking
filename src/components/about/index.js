@@ -3,12 +3,6 @@ import '../../var.css'
 import './style.css'
 import { Shop, Emoji, Job } from '../icons'
 
-const impressumData = [
-  {
-
-  }
-]
-
 export default class About extends Component {
   render() {
     return (

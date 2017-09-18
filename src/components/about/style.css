@@ -27,10 +27,9 @@
 }
 
 .about-jobs-mail {
-  width: 80%;
-  max-width: 350px; 
+  width: 70vw;
+  max-width: 350px;
   margin: auto;
-  font-size: 14px;
   font-weight: 500;
   color: var(--red);
   border: 2px solid var(--red);

@@ -1,68 +1,115 @@
 import React, { Component } from 'react'
 import '../../var.css'
 import './style.css'
-import nikolassee from '../../images/schlachtensee.jpg'
-import grunewald from '../../images/grunewald.jpg'
-import { Phone, Mail, Map, SocialMedia, CroissantAndCoffee, Emoji } from '../icons'
+import Lightbox from 'react-images'
+import nikolassee from '../../images/shops/01.jpg'
+import grunewald from '../../images/shops/02.jpg'
+import { Phone, Mail, Map, SocialMedia, Emoji } from '../icons'
 
-const shopsData = [
-  {
-    established: '2002',
-    title: 'Café VonLuck Nikolassee',
-    district: 'Nikolassee',
-    description: '',
-    phone: '+49 30 80403812',
-    email: 'info@von-luck.de',
-    adress: 'Von-Luck-Straße 27, 14129 Berlin Nikolasee',
-    googleLink: `https://www.google.de/maps/dir/current+location/cafe+von+luck+berlin/@52.4307593,13.1365605,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x47a8590b4320b0f5:0xd5b35bdf7aa528b6!2m2!1d13.2066!2d52.43078`,
-    image: {
-      image: nikolassee,
-      alt: 'Schlachtensee in Berlin Nikolassee'
-    },
-    social: {
-      facebook:'https://www.facebook.com/CafevonLuck/',
-      google: '',
-      yelp: '',
-      tripadvisor: ''
-    }
-  },
-  {
-    established: '2010',
-    title: 'Café VonLuck Grunewald',
-    district: 'Grunewald',
-    description: '',
-    phone: '+49 30 60946790',
-    email: 'info@von-luck.de',
-    adress: 'Auerbach Straße 10, 14193 Berlin Grunewald',
-    googleLink: `https://www.google.com/maps/dir/current+location/Caf%C3%A9+VonLuck,+Auerbachstra%C3%9Fe,+Berlin,+Germany/@52.5816575,13.1793634,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47a8574c44670e57:0x18cf837468a54854!2m2!1d13.2620688!2d52.4875438`,
-    image: {
-      image: grunewald,
-      alt: 'Grunewald in Berlin'
-    },
-    social: {
-      facebook:'https://www.facebook.com/CafevonLuck.Grunewald/',
-      google: '',
-      yelp: '',
-      tripadvisor: ''
-    }
-  }
-]
+// import { CroissantAndCoffee } from '../icons'
+
 
 export default class Shops extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      shops: [
+        {
+          established: '2002',
+          title: 'Café VonLuck Nikolassee',
+          district: 'Nikolassee',
+          description: '',
+          phone: '+49 30 80403812',
+          email: 'info@von-luck.de',
+          adress: 'Von-Luck-Straße 27, 14129 Berlin Nikolasee',
+          googleLink: `https://www.google.de/maps/dir/Current+location/Caf%C3%A9+VonLuck,+Von-Luck-Stra%C3%9Fe+27,+14129+Berlin,+Germany`,
+          image: {
+            image: nikolassee,
+            alt: 'Schlachtensee in Berlin Nikolassee',
+            style: {}
+          },
+          social: {
+            facebook:'https://www.facebook.com/CafevonLuck/',
+            google: '',
+            yelp: '',
+            tripadvisor: ''
+          }
+        },
+        {
+          established: '2010',
+          title: 'Café VonLuck Grunewald',
+          district: 'Grunewald',
+          description: '',
+          phone: '+49 30 60946790',
+          email: 'info@von-luck.de',
+          adress: 'Auerbach Straße 10, 14193 Berlin Grunewald',
+          googleLink: `https://www.google.com/maps/dir/Current+location/Caf%C3%A9+VonLuck,+Auerbachstra%C3%9Fe+10,+14193+Berlin,+Germany`,
+          image: {
+            image: grunewald,
+            alt: 'Grunewald in Berlin',
+            style: {}
+          },
+          social: {
+            facebook:'https://www.facebook.com/CafevonLuck.Grunewald/',
+            google: '',
+            yelp: '',
+            tripadvisor: ''
+          }
+        }
+      ]
+    }
+  }
+
+  componentDidMount() {
+    this._defineImageAspect()
+    window.addEventListener("resize", this._defineImageAspect());
+  }
+
+  _defineImageAspect = () => {
+    const { shops } = this.state
+
+    shops.forEach( shop => {
+      const img = new Image();
+      img.src = shop.image.image
+      const imgContainer = document.getElementById(`img-${shop.district.toLowerCase()}`)
+      const imgContainerAspect = imgContainer.clientWidth / imgContainer.clientHeight
+      const imgAspect = img.width / img.height
+      const result = imgAspect >= imgContainerAspect ? 'height' : 'width'
+
+      console.log(shop.district);
+      console.log(shop.image.image);
+      console.log(img);
+      console.log(`img height: ${img.height}`);
+      console.log(`img width: ${img.width}`);
+      console.log(`img aspect: ${imgAspect}`);
+      console.log(`img con aspect: ${imgContainerAspect}`);
+      console.log(result);
+      console.log('----------');
+
+      shop.image.style[result] = '100%'
+    })
+
+    this.setState({ shops })
+  }
+
   render() {
     return (
       <div className="shops">
         {
-          shopsData.map( (shop,index) => {
+          this.state.shops.map( (shop,index) => {
             return(
               <div key={ index } className='shops-shop'>
-                <div className='shops-shop-image'>
+                <div id={`img-${shop.district.toLowerCase()}`} className='shops-shop-image'>
                   <a href={shop.googleLink} >
                     <Map width='50px' color='var(--red)'/>
                   </a>
-                  <img src={ shop.image.image } alt={ shop.image.alt}/>
+                  <img
+                    className={`shops-shop-image-${shop.district.toLowerCase()}`}
+                    src={ shop.image.image } alt={ shop.image.alt}
+                    style={ shop.image.style }
+                  />
                 </div>
-                <div className='shops-shop-image-established'>
+                <div className='shops-shop-established'>
                   <Emoji emoji="star" width="10px" color="white"/>
                   <Emoji emoji="star" width="10px" color="white"/>
                   <Emoji emoji="star" width="10px" color="white"/>
@@ -74,7 +121,7 @@ export default class Shops extends Component {
                 <div className='shops-shop-info'>
 
                   <h1 className='shops-shop-title'>
-                    <span className='shops-shop-title-big'>Café VonLuck </span>
+                    <span className='shops-shop-title-big'>Café VonLuck</span><br/>
                     <span>{ shop.district }</span>
                   </h1>
                   <p className='shops-shop-description'>{ shop.description }</p>
@@ -101,8 +148,8 @@ export default class Shops extends Component {
                             iconWidth = '40px'
                             icon = <Map width={ iconWidth } color={ iconColor } />
                             link = shop.googleLink
-
                             break;
+                          default: return console.log('iconError in Shops')
                         }
                         return (
                           <div key={ index }>

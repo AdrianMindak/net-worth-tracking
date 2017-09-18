@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
 import '../../var.css'
 import './style.css';
-import { EspressoMaschine } from '../icons'
-
-const foodData = [
-  {
-    image: '',
-    title: 'Croissant',
-    description: '',
-    price: ''
-  },
-  {
-    image: '',
-    title: 'Schrippe',
-    description: '',
-    price: ''
-  }
-]
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      foodData: [
+        {
+          image: '',
+          title: 'Croissant',
+          description: '',
+          price: ''
+        },
+        {
+          image: '',
+          title: 'Schrippe',
+          description: '',
+          price: ''
+        }
+      ]
+    }
+  }
   render() {
     return (
       <div className="home">
         <div className='home-wellcome'>
-          <h1 id='pagetitle'>
-            <span id='pagetitle-cafe'>Café</span><br/>
+          <div id='pagetitle'>
+            <span id='pagetitle-cafe'>Café</span>
             <span id='pagetitle-vonluck'>VonLuck</span>
-          </h1>
+          </div>
+          <h1 className='pagetitle-invisible'>Café VonLuck</h1>
           <p>
             Welcome to Café VonLuck. <br/>
             We do our best to be a mentionable part
