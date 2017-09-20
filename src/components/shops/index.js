@@ -76,16 +76,6 @@ export default class Shops extends Component {
       const imgAspect = img.width / img.height
       const result = imgAspect >= imgContainerAspect ? 'height' : 'width'
 
-      console.log(shop.district);
-      console.log(shop.image.image);
-      console.log(img);
-      console.log(`img height: ${img.height}`);
-      console.log(`img width: ${img.width}`);
-      console.log(`img aspect: ${imgAspect}`);
-      console.log(`img con aspect: ${imgContainerAspect}`);
-      console.log(result);
-      console.log('----------');
-
       shop.image.style[result] = '100%'
     })
 
