@@ -52,7 +52,7 @@
 
   /* menue top or bottom */
     --menue-top: none;
-    --menue-bottom: grid;
+    --menue-bottom: flex;
 }
 
 @media (min-width: 401px) {

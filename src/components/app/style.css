@@ -24,7 +24,6 @@
   height: 100%;
   margin: 0 auto;
   display: var(--menue-top);
-  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   align-items: center;
 }
@@ -73,17 +72,16 @@
 }
 
 .app-menue-links {
+  width: 90%;
+  margin: auto;
   display: var(--menue-bottom);
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .app-menue-links a {
   margin: 1vh;
   padding: 1vh;
-  border-radius: 10px;
-  border: 2px solid white;
 
   display: flex;
   justify-content: center;
