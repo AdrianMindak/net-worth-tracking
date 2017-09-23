@@ -50,9 +50,13 @@
     --l-vl-top: 22vw;
     --l-vl-left: 8vw;
 
-  /* menue top or bottom */
+  /* nav-menue top or bottom */
     --menue-top: none;
     --menue-bottom: flex;
+
+  /* menue */
+    --menue-product-height: auto;
+    --menue-product-width: 100%;
 }
 
 @media (min-width: 401px) {
@@ -75,12 +79,16 @@
       --logo-vonluck: 36px;
       --l-vl-top: 90px;
       --l-vl-left: 23px;
+
+    /* menue */
+      --menue-product-height: auto;
+      --menue-product-width: 30%;
   }
 }
 
 @media (min-width: 500px) {
   * {
-    --menue-top: grid;
+    --menue-top: flex;
     --menue-bottom: none;
   }
 }

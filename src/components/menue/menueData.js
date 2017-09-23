@@ -43,7 +43,7 @@ export default [
     tags: [],
     ingriedience: [],
     price: .3,
-    image: Schrippen,
+    image: 'https://www.dropbox.com/s/vvs5o7480qkenb6/9K0A1609.jpg?dl=0',
     options: [
       {
         title: 'default',
