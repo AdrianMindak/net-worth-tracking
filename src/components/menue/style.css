@@ -50,6 +50,8 @@
 }
 
 .menue-products {
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -70,7 +72,13 @@
 .menue-product img {
   width: 100%;
   height: auto;
+}
 
+.menue-product-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
 }
 
 .menue-product-title {

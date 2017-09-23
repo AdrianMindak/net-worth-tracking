@@ -456,7 +456,7 @@ class Job extends Component {
   }
 };
 
-class Search extends Component {
+class SearchIcon extends Component {
   render() {
     return (
       <svg width={ this.props.width || "100%" } fill={ this.props.color || 'black' } x="0px" y="0px" viewBox="0 0 100 100">
@@ -480,6 +480,18 @@ class Basket extends Component {
   }
 };
 
+class Box extends Component {
+  render() {
+    return (
+      <svg width={ this.props.width || "100%" } fill={ this.props.color || 'black' } x="0px" y="0px" viewBox="0 0 100 100">
+        <g transform="translate(0,-952.36218)">
+          <path d="m 49.90625,956.3644 c -0.3871,0.013 -0.74205,0.088 -1.03125,0.1875 l -39.9999995,16 c -1.10955,0.4489 -1.88743,1.6157 -1.875,2.8125 l 0,54 c 1e-5,1.1865 0.77517,2.3363 1.875,2.7812 l 39.9999995,16 c 0.7127,0.2883 1.5373,0.2883 2.25,0 l 40,-16 c 1.09983,-0.4449 1.87499,-1.5947 1.875,-2.7812 l 0,-54 c 0.0124,-1.1968 -0.76545,-2.3636 -1.875,-2.8125 l -40,-16 c -0.41241,-0.1497 -0.83165,-0.2 -1.21875,-0.1875 z m 0.0937,6.2188 31.875,12.75 L 70,980.1144 38.09375,967.3332 50,962.5832 z m -20,8 31.875,12.75 -11.875,4.7812 -31.874999,-12.7812 11.874999,-4.75 z m -17,9.2187 34,13.59367 0,47.53133 -34,-13.625 0,-47.5 z m 74,0 0,47.5 -14,5.5937 0,-11.5312 A 3.0003,3.0003 0 0 0 69.9687,1018.3019 3.0003,3.0003 0 0 0 67,1021.3644 l 0,13.9375 -14,5.625 0,-47.53133 14,-5.59367 0,11.56247 a 3.0003,3.0003 0 1 0 6,0 l 0,-13.96877 14,-5.5937 z" />
+        </g>
+      </svg>
+    )
+  }
+};
+
 export {
   TrashCan,
   HomeHouse,
@@ -498,6 +510,7 @@ export {
   EspressoMaschine,
   Emoji,
   Job,
-  Search,
+  SearchIcon,
   Basket,
+  Box,
 }

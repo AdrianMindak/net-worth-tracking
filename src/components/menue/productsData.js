@@ -11,7 +11,7 @@ export default [
     tags: [],
     ingriedience: [],
     price: 1.2,
-    image: Croissant,
+    image: { image: Croissant, alt: ''},
     options: [
       {
         title: 'default',
@@ -27,7 +27,7 @@ export default [
     tags: [],
     ingriedience: [],
     price: .7,
-    image: WWW,
+    image: { image: WWW, alt: ''},
     options: [
       {
         title: 'default',
@@ -43,7 +43,7 @@ export default [
     tags: [],
     ingriedience: [],
     price: .3,
-    image: 'https://www.dropbox.com/s/vvs5o7480qkenb6/9K0A1609.jpg?dl=0',
+    image: { image: Schrippen, alt: ''},
     options: [
       {
         title: 'default',
@@ -59,7 +59,7 @@ export default [
     tags: [],
     ingriedience: [],
     price: 1.4,
-    image: Schockocroissnant,
+    image: { image: Schockocroissnant, alt: ''},
     options: [
       {
         title: 'default',

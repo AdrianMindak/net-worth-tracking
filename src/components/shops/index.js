@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../../var.css'
 import './style.css'
-import Lightbox from 'react-images'
+// import Lightbox from 'react-images'
 import nikolassee from '../../images/shops/01.jpg'
 import grunewald from '../../images/shops/02.jpg'
 import { Phone, Mail, Map, SocialMedia, Emoji } from '../icons'
