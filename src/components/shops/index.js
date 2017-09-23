@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { WindowResizeListener } from 'react-window-resize-listener'
 import '../../var.css'
 import './style.css'
 // import Lightbox from 'react-images'
@@ -75,7 +76,7 @@ export default class Shops extends Component {
       const imgContainerAspect = imgContainer.clientWidth / imgContainer.clientHeight
       const imgAspect = img.width / img.height
       const result = imgAspect >= imgContainerAspect ? 'height' : 'width'
-
+      shop.image.style = {}
       shop.image.style[result] = '100%'
     })
 
@@ -89,6 +90,9 @@ export default class Shops extends Component {
           this.state.shops.map( (shop,index) => {
             return(
               <div key={ index } className='shops-shop'>
+                <WindowResizeListener onResize={windowSize => {
+                  this._defineImageAspect()
+                }}/>
                 <div id={`img-${shop.district.toLowerCase()}`} className='shops-shop-image'>
                   <a href={shop.googleLink} >
                     <Map width='50px' color='var(--red)'/>
@@ -100,13 +104,21 @@ export default class Shops extends Component {
                   />
                 </div>
                 <div className='shops-shop-established'>
-                  <Emoji emoji="star" width="10px" color="white"/>
-                  <Emoji emoji="star" width="10px" color="white"/>
-                  <Emoji emoji="star" width="10px" color="white"/>
-                  <h4>{ `since ${shop.established}` }</h4>
-                  <Emoji emoji="star" width="10px" color="white"/>
-                  <Emoji emoji="star" width="10px" color="white"/>
-                  <Emoji emoji="star" width="10px" color="white"/>
+                  {
+                  (
+                    () => {
+                      let result = []
+                      for (let i = 0; i < 7; i++) {
+                        if (i === 3) {
+                          result.push(<h4 key={i}>{ `since ${shop.established}` }</h4>)
+                        } else {
+                          result.push(<Emoji key={i} emoji="star" width="10px" color="white"/>)
+                        }
+                      }
+                      return result
+                    }
+                  )()
+                  }
                 </div>
                 <div className='shops-shop-info'>
 
@@ -159,16 +171,6 @@ export default class Shops extends Component {
                     <a href={ shop.social.facebook } className='shops-shop-extra-social'>
                       <SocialMedia width='45px' color='white'/>
                     </a>
-                    {
-                      /*
-                        <a className='shops-shop-extra-menue-icon'>
-                          <CroissantAndCoffee width='40px' color='white'/>
-                        </a>
-                        <a className='shops-shop-extra-menue'>
-                          our menue
-                        </a>
-                      */
-                    }
                   </div>
                 </div>
               </div>

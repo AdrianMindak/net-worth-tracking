@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Link, Switch, Route } from 'react-router-dom'
+import { NavLink, Switch, Route } from 'react-router-dom'
 import '../../var.css'
 import './style.css'
 import Home from '../home'
 import Shops from '../shops'
 import Menue from '../menue'
 import About from '../about'
+// import Login from '../login'
 import numeral from 'numeral'
 
 numeral.register('locale', 'de', {
@@ -28,17 +29,21 @@ numeral.locale('de');
 
 export default class App extends Component {
   render() {
+    const menueLinks = (
+      <div className='app-nav-menue'>
+        <div className='app-nav-menue-links'>
+          <NavLink exact={ true } to="/" activeClassName='is-active'>Home</NavLink>
+          <NavLink to="/shops" activeClassName='is-active'>Shops</NavLink>
+          <NavLink to="/menue" activeClassName='is-active'>Menue</NavLink>
+          <NavLink to="/about" activeClassName='is-active'>About</NavLink>
+          {/* <NavLink to="/login" activeClassName='is-active'>Login</NavLink> */}
+        </div>
+      </div>
+    )
     return (
       <div className="app">
 
-        <div className='app-header'>
-          <div className='app-header-links'>
-            <Link to="/">Home</Link>
-            <Link to="/shops">Shops</Link>
-            <Link to="/menue">Menue</Link>
-            <Link to="/about">About</Link>
-          </div>
-        </div>
+        { menueLinks }
 
         <div className='app-content'>
           <Switch>
@@ -46,18 +51,9 @@ export default class App extends Component {
             <Route exact path='/shops' component={ Shops }/>
             <Route exact path='/menue' component={ Menue }/>
             <Route exact path='/about' component={ About }/>
+            {/* <Route exact path='/login' component={ Login }/> */}
           </Switch>
         </div>
-
-        <div className='app-menue'>
-          <div className='app-menue-links'>
-            <Link to="/">Home</Link>
-            <Link to="/shops">Shops</Link>
-            <Link to="/menue">Menue</Link>
-            <Link to="/about">About</Link>
-          </div>
-        </div>
-
       </div>
     );
   }

@@ -41,8 +41,6 @@
   border-radius: 50%;
   background-color: white;
 }
-.shops-shop-image-nikolassee {}
-.shops-shop-image-grunewald {}
 
 .shops-shop-established {
   display: flex;
@@ -117,10 +115,6 @@ a.shops-shop-contact-info-value:active {
 
 .shops-shop-extra {
   margin-top: 30px;
-  /*
-  display: grid;
-  grid-template-columns: 1fr 2fr 3fr;
-  */
   display: flex;
   justify-content: center;
   align-items: center;
