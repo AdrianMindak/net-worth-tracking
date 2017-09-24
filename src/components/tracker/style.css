@@ -1,0 +1,21 @@
+.tracker {
+  width: 100%;
+  height: auto;
+}
+
+.tracker-nav-menue {
+  padding: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.tracker-nav-menue a {
+  color: var(--prim-theme-color);
+  border-bottom: 1.5px solid var(--prim-bg-color);
+  padding: 2vw;
+}
+
+.tracker-nav-menue a.is-active {
+  border-bottom: 1.5px solid var(--prim-theme-color);
+}

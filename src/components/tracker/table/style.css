@@ -1,0 +1,55 @@
+button {
+  padding: 0;
+  margin: 0;
+}
+
+.table {
+  margin: 30px auto;
+}
+
+.table-title {
+  text-align: center;
+  margin: 20px auto;
+  font-weight: 600;
+}
+
+.table-header {
+  margin: 10px auto;
+}
+
+.table-header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-grid {
+  display: grid;
+}
+
+.table-body {
+  color: var(--grey);
+  font-size: 12px;
+  max-height: 200px;
+  height: auto;
+  overflow: auto;
+
+}
+
+.table-row {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.table-row button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.table-body-cell-format {
+  display: flex;
+  align-items: center;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Route, Switch } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../../var.css'
 import './style.css';
 import { NetWorthAtom } from '../icons'

@@ -7,7 +7,7 @@ import App from './components/app'
 import registerServiceWorker from './registerServiceWorker';
 import { ApolloProvider, createNetworkInterface, ApolloClient } from 'react-apollo'
 const networkInterface = createNetworkInterface({
-  uri: 'https://api.graph.cool/simple/v1/cj7tg34bt0x1k0146kfysz3e2',
+  uri: 'https://api.graph.cool/simple/v1/cj7yhbb8u1m4w0147cpjgail7',
 })
 
 const client = new ApolloClient({

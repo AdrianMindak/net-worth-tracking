@@ -9,8 +9,7 @@ const colors = {
 class TrashCan extends Component {
   render() {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" width={ this.props.scale || "100%" } fill={ this.props.color || "black" } viewBox="0 0 100 100" x="0px" y="0px">
-        <title>trash can</title>
+      <svg width={ this.props.scale || "100%" } fill={ this.props.color || "black" } viewBox="5 5 90 90">
         <path d="M75,31.5H62V28.75a7,7,0,0,0-7-7H45a7,7,0,0,0-7,7V31.5H25a3,3,0,0,0,0,6h5V67.25a11,11,0,0,0,11,11H59a11,11,0,0,0,11-11V37.5h5a3,3,0,0,0,0-6ZM44,28.75a1,1,0,0,1,1-1H55a1,1,0,0,1,1,1V31.5H44Zm20,38.5a5,5,0,0,1-5,5H41a5,5,0,0,1-5-5V37.5H64Z"/>
       </svg>
     )
@@ -139,7 +138,7 @@ class ValidationIcons extends Component {
   render() {
     if (this.props.validation) {
       return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={ this.props.scale || "100%" } fill={ colors.yesGreen } x="0px" y="0px" viewBox="-949 951 100 100">
+        <svg xmlns="http://www.w3.org/2000/svg" width={ this.props.scale || "100%" } fill={ this.props.color || colors.yesGreen } x="0px" y="0px" viewBox="-949 951 100 100">
           <switch>
             <foreignObject requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" x="0" y="0" width="1" height="1"/>
             <g>
@@ -150,7 +149,7 @@ class ValidationIcons extends Component {
       )
     } else {
       return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={ this.props.scale || "100%" } fill={ colors.noRed } x="0px" y="0px" viewBox="-949 951 100 100">
+        <svg xmlns="http://www.w3.org/2000/svg" width={ this.props.scale || "100%" } fill={ this.props.color || colors.noRed } x="0px" y="0px" viewBox="-949 951 100 100">
         <switch>
           <foreignObject requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" x="0" y="0" width="1" height="1"/>
           <g>
