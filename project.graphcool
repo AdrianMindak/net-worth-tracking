@@ -1,0 +1,68 @@
+# projectId: cj7tg34bt0x1k0146kfysz3e2
+# version: 40
+
+type File implements Node {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  ingredient: Ingredient @relation(name: "IngredientOnFile")
+  name: String!
+  products: [Product!]! @relation(name: "ProductOnImage")
+  secret: String! @isUnique
+  shops: [Shop!]! @relation(name: "ShopOnFile")
+  size: Int!
+  supplier: Supplier @relation(name: "SupplierOnFile")
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type Ingredient implements Node {
+  icon: File @relation(name: "IngredientOnFile")
+  id: ID! @isUnique
+  products: [Product!]! @relation(name: "ProductOnIngredients")
+  title: String!
+}
+
+type Product implements Node {
+  description: String
+  id: ID! @isUnique
+  images: [File!]! @relation(name: "ProductOnImage")
+  ingredients: [Ingredient!]! @relation(name: "ProductOnIngredients")
+  purchasePrice: Int!
+  shortTitle: String
+  suppliers: [Supplier!]! @relation(name: "SupplierOnProduct")
+  title: String!
+}
+
+type Shop implements Node {
+  adress: String!
+  email: String!
+  established: DateTime!
+  googleMapsLocation: String!
+  id: ID! @isUnique
+  images: [File!]! @relation(name: "ShopOnFile")
+  phone: String!
+  shortName: String
+  story: String
+  url: [String!]
+  users: [User!]! @relation(name: "ShopOnUser")
+}
+
+type Supplier implements Node {
+  file: File @relation(name: "SupplierOnFile")
+  id: ID! @isUnique
+  products: [Product!]! @relation(name: "SupplierOnProduct")
+  title: String!
+  url: String
+}
+
+type User implements Node {
+  createdAt: DateTime!
+  firstName: String!
+  id: ID! @isUnique
+  lastName: String!
+  middleName: [String!]!
+  shops: [Shop!]! @relation(name: "ShopOnUser")
+  updatedAt: DateTime!
+  userType: UserTypes!
+}

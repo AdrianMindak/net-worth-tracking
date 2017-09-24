@@ -1,9 +1,7 @@
 .maintenance {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  margin: 30px auto;
 
   display: flex;
   justify-content: center;
@@ -12,6 +10,8 @@
 }
 
 .maintenance-title {
+  text-align: center;
+  margin: 10px auto;
   font-size: 20px;
   font-weight: 400;
   color: var(--grey);

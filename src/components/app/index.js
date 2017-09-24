@@ -1,40 +1,51 @@
 import React, { Component } from 'react';
-import { Link, Switch, Route } from 'react-router-dom'
+import { NavLink, Switch, Route } from 'react-router-dom'
 import '../../var.css'
 import './style.css'
 import Home from '../home'
-import Shops from '../shops'
-import About from '../about'
+import Maintenance from '../maintenance'
+import { NetWorthAtom } from '../icons'
+import numeral from 'numeral'
+
+numeral.register('locale', 'de', {
+    delimiters: {
+        thousands: '.',
+        decimal: ','
+    },
+    abbreviations: {
+        thousand: 'k',
+        million: 'm',
+        billion: 'b',
+        trillion: 't'
+    },
+    currency: {
+        symbol: '€'
+    }
+});
+
+numeral.locale('de');
 
 export default class App extends Component {
   render() {
+    const menueLinks = (
+      <div className='app-nav-menue'>
+        <div className='app-nav-menue-links'>
+          <NavLink exact={ true } to="/" activeClassName='is-active'><NetWorthAtom scale='30px' color='var(--prim-theme-color)'/></NavLink>
+          <NavLink to="/login" activeClassName='is-active'>Login</NavLink>
+        </div>
+      </div>
+    )
     return (
       <div className="app">
 
-        <div className='app-header'>
-          <div className='app-header-links'>
-            <Link to="/">Home</Link>
-            <Link to="/shops">Shops</Link>
-            <Link to="/about">About</Link>
-          </div>
-        </div>
+        { menueLinks }
 
         <div className='app-content'>
           <Switch>
             <Route exact path='/' component={ Home }/>
-            <Route exact path='/shops' component={ Shops }/>
-            <Route exact path='/about' component={ About }/>
+            <Route exact path='/login' component={ Maintenance }/>
           </Switch>
         </div>
-
-        <div className='app-menue'>
-          <div className='app-menue-links'>
-            <Link to="/">Home</Link>
-            <Link to="/shops">Shops</Link>
-            <Link to="/about">About</Link>
-          </div>
-        </div>
-
       </div>
     );
   }

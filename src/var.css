@@ -14,6 +14,13 @@
   --blue-rgba: rgb(50, 147, 226);
   --light-blue: rgb(77,177,226);
 
+  /* theme colors */
+  --prim-theme-color: var(--blue);
+  --sec-theme-color: var(--light-blue);
+
+  --prim-bg-color: white;
+  --sec-bg-color: var(--dark-white);
+
 /* font */
   --font-standard: 'Open Sans', sans-serif;
   --font-oldfassion: 'IM Fell Great Primer SC', 'Open Sans', serif;
@@ -37,8 +44,6 @@
 
   /* app-content */
     --a-c-width: 90vw;
-    --a-c-padding: 5vw;
-    --a-c-padding-bottom: 20vw;
 
   /* logo home */
     --logo: 50vw;
@@ -50,9 +55,13 @@
     --l-vl-top: 22vw;
     --l-vl-left: 8vw;
 
-  /* menue top or bottom */
+  /* nav-menue top or bottom */
     --menue-top: none;
-    --menue-bottom: grid;
+    --menue-bottom: flex;
+
+  /* menue */
+    --menue-product-height: auto;
+    --menue-product-width: 100%;
 }
 
 @media (min-width: 401px) {
@@ -75,12 +84,16 @@
       --logo-vonluck: 36px;
       --l-vl-top: 90px;
       --l-vl-left: 23px;
+
+    /* menue */
+      --menue-product-height: auto;
+      --menue-product-width: 30%;
   }
 }
 
 @media (min-width: 500px) {
   * {
-    --menue-top: grid;
+    --menue-top: flex;
     --menue-bottom: none;
   }
 }

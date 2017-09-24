@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
+import { NavLink, Route, Switch } from 'react-router-dom'
 import '../../var.css'
 import './style.css';
+import { NetWorthAtom } from '../icons'
 
 export default class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      foodData: [
-        {
-          image: '',
-          title: 'Croissant',
-          description: '',
-          price: ''
-        },
-        {
-          image: '',
-          title: 'Schrippe',
-          description: '',
-          price: ''
-        }
-      ]
     }
   }
   render() {
@@ -27,22 +15,19 @@ export default class Home extends Component {
       <div className="home">
         <div className='home-wellcome'>
           <div id='pagetitle'>
-            <span id='pagetitle-cafe'>Café</span>
-            <span id='pagetitle-vonluck'>VonLuck</span>
+            <NetWorthAtom scale='100px' color='var(--prim-theme-color)'/>
           </div>
           <h1 className='pagetitle-invisible'>Café VonLuck</h1>
           <p>
-            Welcome to Café VonLuck. <br/>
-            We do our best to be a mentionable part
-            of the Nikolassee and Grunewald community,
-            to be a good place for work for our employees
-            and offer great food to our beloved customers.
+            Welcome to Net Worth Tracker. <br/>
+            With this app zou should be able to track your income and expenses in
+            a way to help you to grow a furtion. 
           </p>
-          <a href='mailto:info@von-luck.de?Subject=Customer%20Feedback' target='_top'>
-            <div className='home-customer-feedback'>
-              Give us your feedback via e-mail.
-            </div>
-          </a>
+          <NavLink
+            to='/login'
+            className='home-getting-started'
+            activeClassName='is-active'
+            >Getting started.</NavLink>
         </div>
       </div>
     );
