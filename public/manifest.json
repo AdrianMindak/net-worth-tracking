@@ -1,32 +1,17 @@
 {
-  "short_name": "CVL HomeApp",
-  "name": "Café VonLuck Homepage",
-  "description": "A Café VonLuck homepage web application.",
+  "short_name": "Net Worth Tracking",
+  "name": "Net Worth Tracking",
+  "description": "A finance app to track zour monthly expenses and yield.",
   "icons": [
     {
       "src": "fav/favicon.ico",
-      "sizes": "48x48",
+      "sizes": "128x128",
       "type": "image/png"
-    },
-    {
-        "src": "fav/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    },
-    {
-        "src": "fav/android-chrome-256x256.png",
-        "sizes": "256x256",
-        "type": "image/png"
-    },
-    {
-        "src": "/favapple-touch-icon.png",
-        "sizes": "180x180",
-        "type": "image/png"
     }
   ],
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#E25252",
-  "background_color": "#ffffff"
+  "theme_color": "#3293E2",
+  "background_color": "rgb(248, 248, 250)"
 }

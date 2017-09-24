@@ -3,10 +3,8 @@ import { NavLink, Switch, Route } from 'react-router-dom'
 import '../../var.css'
 import './style.css'
 import Home from '../home'
-import Shops from '../shops'
-import Menue from '../menue'
-import About from '../about'
-// import Login from '../login'
+import Maintenance from '../maintenance'
+import { NetWorthAtom } from '../icons'
 import numeral from 'numeral'
 
 numeral.register('locale', 'de', {
@@ -32,11 +30,8 @@ export default class App extends Component {
     const menueLinks = (
       <div className='app-nav-menue'>
         <div className='app-nav-menue-links'>
-          <NavLink exact={ true } to="/" activeClassName='is-active'>Home</NavLink>
-          <NavLink to="/shops" activeClassName='is-active'>Shops</NavLink>
-          <NavLink to="/menue" activeClassName='is-active'>Menue</NavLink>
-          <NavLink to="/about" activeClassName='is-active'>About</NavLink>
-          {/* <NavLink to="/login" activeClassName='is-active'>Login</NavLink> */}
+          <NavLink exact={ true } to="/" activeClassName='is-active'><NetWorthAtom scale='30px' color='var(--prim-theme-color)'/></NavLink>
+          <NavLink to="/login" activeClassName='is-active'>Login</NavLink>
         </div>
       </div>
     )
@@ -48,10 +43,7 @@ export default class App extends Component {
         <div className='app-content'>
           <Switch>
             <Route exact path='/' component={ Home }/>
-            <Route exact path='/shops' component={ Shops }/>
-            <Route exact path='/menue' component={ Menue }/>
-            <Route exact path='/about' component={ About }/>
-            {/* <Route exact path='/login' component={ Login }/> */}
+            <Route exact path='/login' component={ Maintenance }/>
           </Switch>
         </div>
       </div>

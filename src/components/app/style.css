@@ -15,7 +15,7 @@
   height: auto;
   width: 100%;
   background-color: white;
-  border-bottom: 5px solid var(--red);
+  border-bottom: 5px solid var(--prim-theme-color);
   box-shadow: 0px -5px 20px 0px black;
 }
 
@@ -26,7 +26,7 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
 .app-nav-menue-links a {
@@ -36,23 +36,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-decoration: none;
   font-size: var(--fz-h4);
   font-weight: 500;
-  color: var(--red);
+  color: var(--prim-theme-color);
+  border-bottom: 3px solid var(--prim-bg-color);
 }
 
 .app-nav-menue-links a.is-active {
-  color: white;
-  background-color: var(--red);
+  border-bottom: 3px solid var(--prim-theme-color);
 }
 
 .app-content {
   min-width: 280px;
   width: var(--a-c-width);
   max-width: 800px;
+  min-height: 80%;
   height: auto;
-  margin: 14vw auto;
+  margin: 20vw auto;
   overflow: auto;
 }

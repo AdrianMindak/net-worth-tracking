@@ -5,35 +5,10 @@
 }
 
 #pagetitle {
-  margin: var(--logo-margin) auto;
-  position: relative;
-  min-width: 100px;
-  min-height: 100px;
-  width: var(--logo);
-  height: var(--logo);
-  border-radius: 50%;
-  border: 5px solid var(--dark-red);
-  background-color: var(--red);
-}
-
-#pagetitle-cafe {
-  position: absolute;
-  top: var(--l-c-top);
-  left: var(--l-c-left);
-
-  font-weight: 700;
-  font-size: var(--logo-cafe);
-  color: var(--dark-grey);
-}
-
-#pagetitle-vonluck {
-  position: absolute;
-  top: var(--l-vl-top);
-  left: var(--l-vl-left);
-
-  font-weight: 700;
-  font-size: var(--logo-vonluck);
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
 }
 
 h1.pagetitle-invisible {
@@ -41,6 +16,7 @@ h1.pagetitle-invisible {
 }
 
 .home-wellcome {
+  height: 100%;
   text-align: center;
 }
 
@@ -49,10 +25,15 @@ h1.pagetitle-invisible {
   line-height: 2;
 }
 
-.home-customer-feedback {
+.home-getting-started {
   margin: 20px;
   padding: 10px;
-  color: var(--blue);
-  border: 2px solid var(--blue);
+  color: var(--prim-theme-color);
+  border: 2px solid var(--prim-theme-color);
   border-radius: 10px;
+}
+
+.home-getting-started.is-active {
+  color: var(--prim-bg-color);
+  background-color: var(--prim-theme-color);
 }

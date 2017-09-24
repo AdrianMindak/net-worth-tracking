@@ -14,6 +14,13 @@
   --blue-rgba: rgb(50, 147, 226);
   --light-blue: rgb(77,177,226);
 
+  /* theme colors */
+  --prim-theme-color: var(--blue);
+  --sec-theme-color: var(--light-blue);
+
+  --prim-bg-color: white;
+  --sec-bg-color: var(--dark-white);
+
 /* font */
   --font-standard: 'Open Sans', sans-serif;
   --font-oldfassion: 'IM Fell Great Primer SC', 'Open Sans', serif;
