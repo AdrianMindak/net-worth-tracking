@@ -4,6 +4,7 @@ import '../../var.css'
 import './style.css'
 import Home from '../home'
 import Maintenance from '../maintenance'
+import Tracker from '../tracker'
 import { NetWorthAtom } from '../icons'
 import numeral from 'numeral'
 
@@ -44,6 +45,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path='/' component={ Home }/>
             <Route exact path='/login' component={ Maintenance }/>
+            <Route exact path='/tracker' component={ Tracker }/>
           </Switch>
         </div>
       </div>
