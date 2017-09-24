@@ -44,8 +44,8 @@ export default class App extends Component {
         <div className='app-content'>
           <Switch>
             <Route exact path='/' component={ Home }/>
-            <Route exact path='/login' component={ Maintenance }/>
-            <Route exact path='/tracker' component={ Tracker }/>
+            <Route path='/login' component={ Maintenance }/>
+            <Route path='/tracker' component={ Tracker }/>
           </Switch>
         </div>
       </div>
