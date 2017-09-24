@@ -1,4 +1,4 @@
-### Net Worth Tracker
+# Net Worth Tracker
 To keep track of your income and expenses.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
