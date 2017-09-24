@@ -21,10 +21,10 @@ export default class Home extends Component {
           <p>
             Welcome to Net Worth Tracker. <br/>
             With this app zou should be able to track your income and expenses in
-            a way to help you to grow a furtion. 
+            a way to help you to grow a furtion.
           </p>
           <NavLink
-            to='/login'
+            to='/tracker'
             className='home-getting-started'
             activeClassName='is-active'
             >Getting started.</NavLink>
