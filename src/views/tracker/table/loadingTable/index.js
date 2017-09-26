@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../../../../var.css'
 import './style.css'
 import _ from 'lodash'
 
 const LoadingTable = ({ columns, rows }) => {
-  console.log(columns, rows);
   return (
     <div className='table-loading'>
       <div className='table-loading-title'></div>

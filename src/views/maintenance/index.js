@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../var.css'
 import './style.css';
-import * as Icons from '../icons'
+import * as Icons from '../../components/icons'
 
 const MaintenanceIcon = Icons.Maintenance
 

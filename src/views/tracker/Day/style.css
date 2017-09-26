@@ -1,0 +1,13 @@
+.tracker-day {
+
+}
+
+.tracker-day-headline {
+  width: 50%;
+  margin: 20px auto;
+  color: var(--dark-grey);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

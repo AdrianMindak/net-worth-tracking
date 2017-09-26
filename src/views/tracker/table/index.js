@@ -3,14 +3,45 @@ import '../../../var.css'
 import './style.css'
 import numeral from 'numeral'
 import moment from 'moment'
-import { ValidationIcons } from '../../icons'
+import { ValidationIcons } from '../../../components/icons'
 import LoadingTable from './loadingTable'
+import AddRow from './addRow'
+
+// Examlpe:
+// options = {
+//   loading: true || false,
+//   title:'Income & Expense',
+//   header:['date', 'title', 'account', 'value', 'type'],
+//   format:[
+//     {
+//       orientation: 'center',
+//       date: 'll'
+//     },
+//     {orientation: 'center'},
+//     {orientation: 'center'},
+//     {
+//       orientation: 'end',
+//       number: '$ (0,0.0)'
+//     },
+//     {orientation: 'center'}
+//   ],
+//   data:[
+//     [1,2,3,4,6],
+//     [2,'d',5,2,'k'],
+//     [1,2,3,4,6],
+//     [2,'d',5,2,'k'],
+//     [1,2,3,4,6],
+//     [2,'d',5,2,'k'],
+//     [1,2,3,4,6],
+//     [2,'d',5,2,'k'],
+//
+//   ]
+// }
 
 export default class Table extends Component {
   render() {
     const props = this.props.options
     if (props.loading) {
-      console.log('table is loading');
       return(
         <LoadingTable columns={ props.header.length } rows={ 3 }/>
       )
@@ -77,20 +108,7 @@ export default class Table extends Component {
               })
             }
           </div>
-          {/* <div className='tracker-day-bookings-body'>
-            {
-              otherData.map( (value,index) => {
-                return(
-                  <div key={ index } className='tracker-day-bookings-body-booking tracker-day-table-grid'>
-                    <div className='tracker-day-cell-format'>{ moment().format('ll')}</div>
-                    <div className='tracker-day-cell-format '>N26</div>
-                    <div className='tracker-day-cell-format-end '>{ numeral(value).format('$ (0.0,0)') }</div>
-                    <div className='tracker-day-cell-format '>in</div>
-                  </div>
-                )
-              })
-            }
-          </div> */}
+          <AddRow />
         </div>
       )
     }

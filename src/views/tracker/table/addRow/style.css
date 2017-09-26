@@ -1,0 +1,157 @@
+.add-row-add-button-not-active {
+  background-color: var(--blue);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  margin: 10px auto;
+}
+
+.add-row {
+  margin: 10px auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.add-row-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 10px;
+
+  border: 3px solid var(--prim-theme-color);
+  border-radius: 10px 10px 5px 5px;
+}
+
+.add-row-inputs > button.close-add-row {
+  margin: 0 0 0 auto;
+}
+
+.add-row-input-picked-date {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 16px;
+  font-weight: 500;
+  /*color: var(--blue);*/
+}
+
+.add-row-input-date-picker-year,
+.add-row-input-date-picker-month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-row-input-date-picker {
+  margin: 10px auto;
+  width: 100%;
+  height: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-row-input-date-picker-week-headline {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.add-row-input-date-picker-week {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-row-input-date-picker-day {
+  margin: 5px;
+  border: none;
+  background-color: white;
+  padding: 5px;
+}
+
+.add-row-input-date-picker-day.is-out-of-range {
+  color: var(--grey);
+}
+
+.add-row-input-date-picker-day.is-active {
+  background-color: var(--blue);
+  color: white;
+  border-radius: 50%;
+}
+
+.add-row-input {
+  width: 95%;
+  margin: 10px auto;
+}
+
+.add-row-input input {
+  margin: 0 auto;
+  padding: 5px;
+  width: 95%;
+  height: 100%;
+  border: none;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 5px;
+}
+
+.add-row-input input:focus {
+  outline: none;
+}
+
+.add-row-input-accout-drop-down-menue {
+  display: none;
+}
+
+.add-row-input-accout-drop-down-menue.is-active {
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.add-row-input-option-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.add-row-input-option-button {
+  width: 90%;
+  color: var(--blue);
+  background-color: white;
+  padding: 5px;
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.add-row-input-option-button.is-active {
+  color: white;
+  background-color: var(--blue);
+}
+
+
+.add-row-add-button-is-active {
+  margin: 10px 0;
+  padding: 0;
+  border: none;
+  border-radius: 5px 5px 10px 10px;
+  background-color: var(--prim-theme-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

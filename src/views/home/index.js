@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import '../../var.css'
 import './style.css';
-import { NetWorthAtom } from '../icons'
+import { NetWorthAtom } from '../../components/icons'
 
 export default class Home extends Component {
   constructor(props) {

@@ -5,7 +5,7 @@ import './style.css'
 import Home from '../home'
 import Maintenance from '../maintenance'
 import Tracker from '../tracker'
-import { NetWorthAtom } from '../icons'
+import { NetWorthAtom } from '../../components/icons'
 import numeral from 'numeral'
 
 numeral.register('locale', 'de', {

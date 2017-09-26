@@ -162,6 +162,28 @@ class ValidationIcons extends Component {
   }
 };
 
+class MathIcons extends Component {
+  render() {
+    switch (this.props.icon) {
+      case 'plus': return (
+        <svg width={ this.props.scale || "100%" } fill={ this.props.color || 'black' } viewBox="0 0 100 100">
+          <g transform="translate(0,-952.36218)">
+            <path d="m 50,968.36215 c -3.3136,0 -6,2.6863 -6,6 l 0,22 -22,0 c -3.3137,0 -6,2.68616 -6,5.99995 0,3.3136 2.6863,6 6,6 l 22,0 0,22.0001 c 0,3.3137 2.6864,6 6,6 3.3138,0 6,-2.6863 6,-6 l 0,-22.0001 22,0 c 3.3137,0 6,-2.6864 6,-6 0,-3.31379 -2.6863,-5.99995 -6,-5.99995 l -22,0 0,-22 c 0,-3.3137 -2.6862,-6 -6,-6 z"/>
+          </g>
+        </svg>
+      )
+      case 'minus': return (
+        <svg width={ this.props.scale || "100%" } fill={ this.props.color || 'black' } viewBox="0 0 50 62.5">
+          <g transform="translate(0,-1002.3622)">
+            <path d="m 13,1025.3622 c -1.10457,0 -2,0.8954 -2,2 0,1.1045 0.89543,2 2,2 l 24,0 c 1.10457,0 2,-0.8955 2,-2 0,-1.1046 -0.89543,-2 -2,-2 z"/>
+          </g>
+        </svg>
+      )
+      default: return new Error("Error found no Mathsymbole. Make sure you used the right properties.");
+    }
+  }
+};
+
 class CashFlowIcons extends Component {
   constructor(props) {
     super(props)
@@ -533,6 +555,7 @@ export {
   Shop,
   WavedAccountingSheet,
   ValidationIcons,
+  MathIcons,
   CashFlowIcons,
   CircledArrow,
   Map,

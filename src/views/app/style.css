@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .app-nav-menue {
@@ -50,7 +50,7 @@
 .app-content {
   min-width: 280px;
   width: var(--a-c-width);
-  max-width: 800px;
+  max-width: 500px;
   min-height: 80%;
   height: auto;
   margin: 20vw auto;
